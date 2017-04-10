@@ -12,7 +12,7 @@ The box includes:
 *6. Web Framework:* [flask](http://flask.pocoo.org/) 
 *7. Visualization:* [matplotlib](http://matplotlib.org/), [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [bokeh](http://bokeh.pydata.org/en/latest/) 
 *8. Machine Learning:* [scikit-learn](http://scikit-learn.org/stable/), [theano](http://deeplearning.net/software/theano/), [keras](http://keras.io/), [tensorflow](https://www.tensorflow.org/)
-*9. Big Data Frameworks:* [Spark](http://spark.apache.org/)  [Hadoop](http://hadoop.apache.org/) 
+*9. Big Data Frameworks:* [Spark](http://spark.apache.org/),  [Hadoop](http://hadoop.apache.org/) 
 
 ## Instructions:
 · Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
