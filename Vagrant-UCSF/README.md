@@ -4,14 +4,15 @@
 A Vagrant machine ready for UCSF workshop in Python.
 
 The box includes: 
-**1. Basics:** [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), [scipy](https://www.scipy.org/), [jupyter](http://jupyter.org/) 
-**2. Data acquisition:** [requests](http://docs.python-requests.org/en/master/), [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/), [feedparser](http://pythonhosted.org/feedparser/), [scrapy](http://scrapy.org/) 
-**3. NLP:** [re](https://docs.python.org/2/library/re.html), [NLTK](http://www.nltk.org/) 
-**4. Database connection:** [psycopg2](http://initd.org/psycopg/), [pymongo](https://docs.mongodb.com/getting-started/python/client/), [pyodbc](http://mkleehammer.github.io/pyodbc/) 
-**5. AWS:** [boto3](https://boto3.readthedocs.io/en/latest/) 
-**6. Web Framework:** [flask](http://flask.pocoo.org/) 
-**7. Visualization:** [matplotlib](http://matplotlib.org/), [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [bokeh](http://bokeh.pydata.org/en/latest/) 
-**8. Machine Learning:** [scikit-learn](http://scikit-learn.org/stable/), [theano](http://deeplearning.net/software/theano/), [keras](http://keras.io/), [tensorflow](https://www.tensorflow.org/) 
+*1. Basics:* [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), [scipy](https://www.scipy.org/), [jupyter](http://jupyter.org/) 
+*2. Data acquisition:* [requests](http://docs.python-requests.org/en/master/), [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/), [feedparser](http://pythonhosted.org/feedparser/), [scrapy](http://scrapy.org/) 
+*3. NLP:* [re](https://docs.python.org/2/library/re.html), [NLTK](http://www.nltk.org/) 
+*4. Database connection:* [psycopg2](http://initd.org/psycopg/), [pymongo](https://docs.mongodb.com/getting-started/python/client/), [pyodbc](http://mkleehammer.github.io/pyodbc/) 
+*5. AWS:* [boto3](https://boto3.readthedocs.io/en/latest/) 
+*6. Web Framework:* [flask](http://flask.pocoo.org/) 
+*7. Visualization:* [matplotlib](http://matplotlib.org/), [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [bokeh](http://bokeh.pydata.org/en/latest/) 
+*8. Machine Learning:* [scikit-learn](http://scikit-learn.org/stable/), [theano](http://deeplearning.net/software/theano/), [keras](http://keras.io/), [tensorflow](https://www.tensorflow.org/)
+*9. Big Data Frameworks:* [Spark](http://spark.apache.org/)  [Hadoop](http://hadoop.apache.org/) 
 
 ## Instructions:
 · Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
