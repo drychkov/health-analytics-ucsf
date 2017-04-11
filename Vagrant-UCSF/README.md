@@ -4,8 +4,8 @@
 A Vagrant machine ready for UCSF workshop in Python.
 
 The box includes: 
-*1. Basics:* [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), [scipy](https://www.scipy.org/), [jupyter](http://jupyter.org/) 
-*2. Data acquisition:* [requests](http://docs.python-requests.org/en/master/), [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/), [feedparser](http://pythonhosted.org/feedparser/), [scrapy](http://scrapy.org/) 
+* 1. Basics:* [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), [scipy](https://www.scipy.org/), [jupyter](http://jupyter.org/) 
+* 2. Data acquisition:* [requests](http://docs.python-requests.org/en/master/), [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/), [feedparser](http://pythonhosted.org/feedparser/), [scrapy](http://scrapy.org/) 
 *3. NLP:* [re](https://docs.python.org/2/library/re.html), [NLTK](http://www.nltk.org/) 
 *4. Database connection:* [psycopg2](http://initd.org/psycopg/), [pymongo](https://docs.mongodb.com/getting-started/python/client/), [pyodbc](http://mkleehammer.github.io/pyodbc/) 
 *5. AWS:* [boto3](https://boto3.readthedocs.io/en/latest/) 
