@@ -15,9 +15,9 @@ The box includes:
 9. Big Data Frameworks: [Spark](http://spark.apache.org/),  [Hadoop](http://hadoop.apache.org/) 
 
 ## Instructions:
-· Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
-· Install [Vagrant](https://www.vagrantup.com/) 
-· Change to your project directory after having downloaded/cloned it on your computer
+* Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
+* Install [Vagrant](https://www.vagrantup.com/) 
+* Change to your project directory after having downloaded/cloned it on your computer
 ```
 $ cd vagrant-UCSF
 ```
