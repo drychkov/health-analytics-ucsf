@@ -17,7 +17,7 @@ The box includes:
 ## Instructions:
 · Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
 · Install [Vagrant](https://www.vagrantup.com/) 
-· Change to your project directory 
+· Change to your project directory after having downloaded/cloned it on your computer
 ```
 $ cd vagrant-UCSF
 ```
