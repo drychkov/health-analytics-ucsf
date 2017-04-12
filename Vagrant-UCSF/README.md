@@ -29,10 +29,23 @@ $ vagrant up
 ```
 $ vagrant ssh
 ```
- If asked for a password, use
+ If asked for a password and downloaded before Tuesday, use
 ```
 e43b35d5be0112aeaa005902
 ```
+else, use
+```
+25dcce02bcd72a390fbcb2db
+```
+
+For future versions, the password can be found in a text file at the following location:
+
+```
+~/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20170410.0.0/virtualbox/Vagrantfile
+
+(Look for the latest date in place of the "20170410.0.0" folder)
+```
+
 
 ## Jupyter notebook:
 To launch jupyter run 
