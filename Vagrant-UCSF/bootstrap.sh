@@ -27,6 +27,7 @@ function pip_install {
 
 # Basics an dependencies
 apt_install python-pip libpq-dev python-dev build-essential python-setuptools
+pip install --upgrade pip >/dev/null 2>&1
 apt_install python-nose g++ git libatlas3gf-base libatlas-dev pyyaml cython unixodbc-dev
 apt_install python-numpy python-pandas
 pip_install jupyter
@@ -37,6 +38,9 @@ apt_install python-scipy
 # Scraping
 apt_install python-requests python-scrapy
 pip_install bs4 feedparser
+
+# European Data Format
+pip_install pyedflib
 
 # NLP
 pip_install nltk
