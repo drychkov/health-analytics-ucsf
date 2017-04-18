@@ -93,14 +93,14 @@ echo "Downloading and installing Scala"
 wget https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.tgz >/dev/null 2>&1
 tar -xzvf scala-2.12.1.tgz >/dev/null 2>&1
 sudo mv scala-2.12.1 /usr/local/scala
-echo "export PATH=\"/usr/local/scala/bin:$PATH\"" >> ~/.bashrc
+echo "export PATH=\"/usr/local/scala/bin:$PATH\"" >> ~/.bash_profile
 
 # Download Spark
 echo "Downloading and installing Spark"
 wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz >/dev/null 2>&1
 tar -xzvf spark-2.1.0-bin-hadoop2.7.tgz >/dev/null 2>&1
 sudo mv spark-2.1.0-bin-hadoop2.7 /usr/local/spark >/dev/null 2>&1
-echo "export PATH=\"/usr/local/spark/bin:$PATH\"" >> ~/.bashrc
+echo "export PATH=\"/usr/local/spark/bin:$PATH\"" >> ~/.bash_profile
 
 printf '*** SETUP FINISHED! ***'
 #####################################################################################
