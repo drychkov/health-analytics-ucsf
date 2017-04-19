@@ -55,6 +55,9 @@ pip_install seaborn bokeh
 # DB connection
 pip_install psycopg2 pymongo pyodbc
 
+# Pandas DB connector
+pip_install sqlalchemy
+
 # AWS
 pip_install boto3
 
