@@ -85,25 +85,57 @@ apt_install libhdf5-7
 
 # Download & install Hadoop
 echo "Downloading and installing Hadoop"
-wget http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+wget http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz >/dev/null 2>&1
 tar -xzvf hadoop-2.7.3.tar.gz >/dev/null 2>&1
 sudo mv hadoop-2.7.3 /usr/local/hadoop
 sudo echo "export JAVA_HOME=$(readlink -f /usr/bin/java | sed \"s:bin/java::\")" >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+rm hadoop*gz
 
 
 # Download Scala
 echo "Downloading and installing Scala"
-wget https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.tgz >/dev/null 2>&1
-tar -xzvf scala-2.12.1.tgz >/dev/null 2>&1
-sudo mv scala-2.12.1 /usr/local/scala
-echo "export PATH=\"/usr/local/scala/bin:$PATH\"" >> ~/.bash_profile
+wget https://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.tgz >/dev/null 2>&1
+tar -xzvf scala-2.11.8.tgz >/dev/null 2>&1
+sudo mv scala-2.11.8 /usr/local/scala
+echo "export SCALA_HOME='/usr/local/scala'" >> ~/.bash_profile
+echo "export PATH='$PATH:SCALA_HOME'" >> ~/.bash_profile
+rm scala*tgz
+
 
 # Download Spark
 echo "Downloading and installing Spark"
 wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz >/dev/null 2>&1
 tar -xzvf spark-2.1.0-bin-hadoop2.7.tgz >/dev/null 2>&1
 sudo mv spark-2.1.0-bin-hadoop2.7 /usr/local/spark >/dev/null 2>&1
-echo "export PATH=\"/usr/local/spark/bin:$PATH\"" >> ~/.bash_profile
+echo "export SPARK_HOME='/usr/local/spark'" >> ~/.bash_profile
+echo "export PATH='$PATH:SPARK_HOME'" >> ~/.bash_profile
+rm spark*tgz
+
+# Update shell
+source ~/.bash_profile
+
+# install sbt
+echo "Installing sbt"
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list  >/dev/null 2>&1
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823  >/dev/null 2>&1
+sudo apt-get update  >/dev/null 2>&1
+sudo apt-get install sbt  >/dev/null 2>&1
+
+# setup spark and jupyter
+git clone https://github.com/apache/incubator-toree >/dev/null 2>&1
+cd incubator-toree/
+make dist >/dev/null 2>&1
+make release >/dev/null 2>&1
+cd dist/toree-pip/
+sudo python setup.py install >/dev/null 2>&1
+cd ~
+jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
+
+# refresh the git repo for the class
+rm -rf health-analytics-ucsf
+git clone https://github.com/sayan91/health-analytics-ucsf.git
+
+
 
 printf '*** SETUP FINISHED! ***'
 #####################################################################################
