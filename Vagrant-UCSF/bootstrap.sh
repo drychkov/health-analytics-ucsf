@@ -122,7 +122,7 @@ sudo apt-get update  >/dev/null 2>&1
 sudo apt-get install sbt  >/dev/null 2>&1
 
 # setup spark and jupyter
-git clone https://github.com/apache/incubator-toree >/dev/null 2>&1
+git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
 cd incubator-toree/
 make dist >/dev/null 2>&1
 make release >/dev/null 2>&1
