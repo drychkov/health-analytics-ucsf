@@ -85,7 +85,7 @@ apt_install libhdf5-7
 
 # Download & install Hadoop
 echo "Downloading and installing Hadoop"
-wget http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz >/dev/null 2>&1
+wget http://apache.claz.org/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz >/dev/null 2>&1
 tar -xzvf hadoop-2.7.3.tar.gz >/dev/null 2>&1
 sudo mv hadoop-2.7.3 /usr/local/hadoop
 sudo echo "export JAVA_HOME=$(readlink -f /usr/bin/java | sed \"s:bin/java::\")" >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
@@ -123,17 +123,17 @@ sudo apt-get install sbt  >/dev/null 2>&1
 
 # setup spark and jupyter
 git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
-cd incubator-toree/
-make dist >/dev/null 2>&1
-make release >/dev/null 2>&1
-cd dist/toree-pip/
-sudo python setup.py install >/dev/null 2>&1
-cd ~
+# cd incubator-toree/
+make incubator-toree/dist >/dev/null 2>&1
+make incubator-toree/release >/dev/null 2>&1
+# cd dist/toree-pip/
+sudo python incubator-toree/dist/toree-pip/setup.py install >/dev/null 2>&1
+# cd ~
 jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
 
 # refresh the git repo for the class
 rm -rf health-analytics-ucsf
-git clone https://github.com/sayan91/health-analytics-ucsf.git
+git clone https://github.com/sayan91/health-analytics-ucsf.git >/dev/null 2>&1
 
 
 
