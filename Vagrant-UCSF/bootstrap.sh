@@ -121,19 +121,21 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823  >/de
 sudo apt-get update  >/dev/null 2>&1
 sudo apt-get install sbt  >/dev/null 2>&1
 
-# setup spark and jupyter
-git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
-# cd incubator-toree/
-make incubator-toree/dist >/dev/null 2>&1
-make incubator-toree/release >/dev/null 2>&1
-# cd dist/toree-pip/
-sudo python incubator-toree/dist/toree-pip/setup.py install >/dev/null 2>&1
-# cd ~
-jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
 
 # refresh the git repo for the class
 rm -rf health-analytics-ucsf
 git clone https://github.com/sayan91/health-analytics-ucsf.git >/dev/null 2>&1
+
+# setup spark and jupyter
+git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
+cd incubator-toree/
+make dist >/dev/null 2>&1
+make release >/dev/null 2>&1
+# cd dist/toree-pip/
+sudo python dist/toree-pip/setup.py install >/dev/null 2>&1
+# cd ~
+jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
+
 
 
 
