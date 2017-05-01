@@ -136,8 +136,8 @@ git clone https://github.com/sayan91/health-analytics-ucsf.git >/dev/null 2>&1
 # setup spark and jupyter
 git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
 cd incubator-toree/
-make dist >/dev/null 2>&1
-make release >/dev/null 2>&1
+sudo make dist >/dev/null 2>&1
+sudo make release >/dev/null 2>&1
 cd dist/toree-pip/
 sudo python setup.py install >/dev/null 2>&1
 jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
