@@ -136,6 +136,8 @@ sudo python dist/toree-pip/setup.py install >/dev/null 2>&1
 # cd ~
 jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
 
+# Download and install Zeppelin
+wget http://apache.claz.org/zeppelin/zeppelin-0.7.1/zeppelin-0.7.1-bin-all.tgz >/dev/null 2>&1
 
 
 
