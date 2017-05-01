@@ -111,6 +111,13 @@ echo "export SPARK_HOME='/usr/local/spark'" >> ~/.bash_profile
 echo "export PATH='$PATH:SPARK_HOME'" >> ~/.bash_profile
 rm spark*tgz
 
+# Download and install Zeppelin
+echo "Downloading and installing Zeppelin"
+wget http://apache.claz.org/zeppelin/zeppelin-0.7.1/zeppelin-0.7.1-bin-all.tgz >/dev/null 2>&1
+tar -xzvf zeppelin-0.7.1-bin-all.tgz >/dev/null 2>&1
+sudo mv zeppelin-0.7.1-bin-all /usr/local/zeppelin >/dev/null 2>&1
+rm zeppelin*tgz
+
 # Update shell
 source ~/.bash_profile
 
@@ -131,13 +138,9 @@ git clone https://github.com/apache/incubator-toree.git >/dev/null 2>&1
 cd incubator-toree/
 make dist >/dev/null 2>&1
 make release >/dev/null 2>&1
-# cd dist/toree-pip/
-sudo python dist/toree-pip/setup.py install >/dev/null 2>&1
-# cd ~
+cd dist/toree-pip/
+sudo python setup.py install >/dev/null 2>&1
 jupyter toree install --kernel_name=spark --spark_home=/usr/local/spark/ --interpreters=PySpark  --user  >/dev/null 2>&1
-
-# Download and install Zeppelin
-wget http://apache.claz.org/zeppelin/zeppelin-0.7.1/zeppelin-0.7.1-bin-all.tgz >/dev/null 2>&1
 
 
 
