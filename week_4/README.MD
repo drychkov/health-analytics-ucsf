@@ -1,6 +1,6 @@
 ## Week 4 Instructions
 
-1. If you are on Mac/Linux, do a ```git pull``` to update the instructions on your own lapto``p (not in the Vagrant box). If you are on Windows, just replace the health-analytics-ucsf/Vagrant-UCSF/bootstrap.sh file with the one available on this repository. You can find it [here](https://github.com/sayan91/health-analytics-ucsf/blob/master/Vagrant-UCSF/bootstrap.sh). 
+1. If you are on Mac/Linux, do a ```git pull``` to update the instructions on your own lapto``p (not in the Vagrant box). If you are on Windows, just replace the health-analytics-ucsf/Vagrant-UCSF/bootstrap.sh file with the one available on this repository. You can find the file [here](https://github.com/sayan91/health-analytics-ucsf/blob/master/Vagrant-UCSF/bootstrap.sh). 
 
 2. Within the Vagrant-UCSF folder, halt your vagrant using ```vagrant halt```.
 3. Start your vagrant again using ```vagrant up```. (Depending on how cleanly you halted your box, you may have to restart your computer before you can continue)
