@@ -4,4 +4,4 @@ For week 5, we can no longer use Python as GraphX is not supported by PySpark. W
 
 After logging onto your Vagrant box using ```Vagrant shh```, please enter the following command before launching your Jupyter notebook:
 
-```upyter toree install --spark_home=/usr/local/spark --user```
+```jupyter toree install --spark_home=/usr/local/spark --user```
