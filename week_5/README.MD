@@ -23,6 +23,8 @@ Create a graph database with 4 types of Nodes (attributes in parantheses):
 3. Disease (Name, Stage)
 4. Hospital (Name, City, State)
 
-Populate the datebase with:
+Populate the datebase with some data and write the Cypher queries for the following question:
+
+Who are the male patients who has been treated by Doctor "A" (choose your name accordinly) who had Stage 3 Cancer in San Francisco.
 
 
